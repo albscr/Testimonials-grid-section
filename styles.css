@@ -1,0 +1,99 @@
+:root {
+  /* COLORS */
+  --color-primary: hsl(263, 55%, 52%);
+  --color-primary-2: hsl(217, 19%, 35%);
+  --color-primary-dark: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --color-grey-1: hsl(0, 0%, 81%);
+  --color-grey-2: hsl(210, 46%, 95%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body {
+  margin: 0;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--color-grey-2);
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 1em 1em;
+}
+
+.col-1 {
+	grid-area: 1 / 1 / 2 / 3;
+    
+    background-color: var(--color-primary);
+}
+
+.col-2 {
+	grid-area: 1 / 3 / 2 / 4;
+    background-color: var(--color-primary-2);
+}
+
+.col-3 {
+	grid-area: 1 / 4 / 3 / 5;
+    background-color: var(--white);
+}
+
+.col-4 {
+	grid-area: 2 / 1 / 3 / 2;
+    background-color: var(--white);
+}
+
+.col-5 {
+	grid-area: 2 / 2 / 3 / 4;
+    background-color: var(--color-primary-dark);
+}

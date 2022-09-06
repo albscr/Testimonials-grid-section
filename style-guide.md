@@ -4,12 +4,12 @@
 
 The designs were created to the following widths:
 
-- Mobile: 375px
+- Mobile: 375px 
 - Desktop: 1440px
 
 ## Colors
 
-### Primary
+### Primary 
 
 Moderate violet: hsl(263, 55%, 52%)
 Very dark grayish blue: hsl(217, 19%, 35%)
